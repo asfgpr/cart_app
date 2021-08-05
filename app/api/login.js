@@ -4,12 +4,12 @@ exports.login = function(req, res) {
         body += data
     })
     req.on('end', async function() {
-        console.log(body);
+        // console.log(body);
         var data = JSON.parse(body);
 
         if (data.type == 'login') {
             var validate = await require('../validate.js').login(data);
-            console.log(validate);
+            // console.log(validate);
             if (validate.status) {
                 let users = require("../user.js");
                 let userObj = new users.user();
