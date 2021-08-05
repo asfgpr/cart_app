@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="view-area form-shape">
+        <h2>LOGIN</h2>
+        <div class="form-area">
+            <div class="form-section">
+                <input type="text" name="email" class="form-controll" placeholder="Email">
+            </div>
+            <div class="form-section">
+                <input type="text" name="pass" class="form-controll" placeholder="Password">
+            </div>
+            <div class="form-section">
+                <button class="form-button btn-login">
+                    <span>LOGIN</span>
+                    <i class="fa fa-spin fa-spinner hide"></i>
+                </button>
+            </div>
+            <div class="error-area hide"></div>
+        </div>
+        <div class="form-bottom">
+            <div class="link-btns">
+                <label class="form-label"><a href="signup">Create new account</a></label>
+            </div>
+            <div class="link-btns">
+                <label class="form-label"><a href="home">Home</a></label>
+            </div>
+        </div>
+    </section>
+    <script src="assets\js\httprequest.js"></script>
+    <script src="assets\js\auth.js"></script>
+</body>
+
+</html>

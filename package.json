@@ -1,0 +1,16 @@
+{
+    "name": "pizza-delivery",
+    "version": "1.0.0",
+    "description": "user authentication and simple cart service.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "Aasif Ansari",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "mysql": "^2.18.1"
+    }
+}

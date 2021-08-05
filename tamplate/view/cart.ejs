@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CART</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="navbar">
+        <ul class="nav-right">
+            <li><a href="/home">HOME</a></li>
+        </ul>
+        <ul class="nav-left">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/cart"><i class="fa fa-shopping-cart"></i><label class="cart-count">
+                        <%= myProducts.length %>
+                    </label></a></li>
+            <li><a href="/logout">LogOut</a></li>
+        </ul>
+    </section>
+    <section class="product-home">
+        <div class="product-box">
+            <% for(i=0; i < myProducts.length; i++){ %>
+                <div class="product-card">
+                    <div class="product-boundary">
+                        <h3>
+                            <%= myProducts[i].name %>
+                        </h3>
+                        <input type="hidden" name="id" value="<%= myProducts[i].id %>">
+                        <ul>
+                            <li>Discription: <%= myProducts[i].discription %>
+                            </li>
+                            <li>Rating: <%= myProducts[i].rating %>
+                            </li>
+                            <li>Seller: <%= myProducts[i].seller %>
+                            </li>
+                            <li>Price: <%= myProducts[i].price %>
+                            </li>
+                        </ul>
+                        <button class="btn-product remove-box">
+                            <span>Delete from cart</span>
+                            <i class="fa fa-spin fa-spinner hide"></i>
+                        </button>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </section>
+    <script src="assets\js\httprequest.js"></script>
+    <script src="assets\js\auth.js"></script>
+</body>
+
+</html>
